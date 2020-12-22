@@ -1,5 +1,66 @@
 {% extends 'store/main.html' %}
 {% load static %}
 {% block content %}
-    <h3>checkout</h3>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="box-element" id="form-wrapper">
+                <form action="" id="form">
+                    <div id="user-info">
+                        <div class="form-field">
+                            <input required type="text" name="name" placeholder="이름" class="form-control">
+                        </div>
+                        <div class="form-field">
+                            <input required type="text" name="email" placeholder="이메일" class="form-control">
+                        </div>
+                    </div>
+
+                    <div id="shipping-info">
+                        <hr>
+                        <p>쇼핑 정보:</p>
+                        <hr>
+                        <div class="form-field">
+                            <input type="text" name="address" placeholder="주소" class="form-control">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="city" placeholder="시" class="form-control">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="state" placeholder="도" class="form-control">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="zipcode" placeholder="우편주소" class="form-control">
+                        </div>
+                        <div class="form-field">
+                            <input type="text" name="country" placeholder="동" class="form-control">
+                        </div>
+                    </div>
+
+                    <hr>
+                    <input type="submit" value="계속" id="formbutton" class="btn btn-success btn-block">
+                </form>
+            </div>
+
+            <br>
+            <div class="box-element hidden" id="payment-info">
+                <small>결제 옵션</small>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="box-element">
+                <a href="{% url 'cart' %}" class="btn btn-outline-dark">&#x2190; 카트</a>
+                <hr>
+                <h3>주문 목록</h3>
+                <hr>
+                <div class="car-row">
+                    <div style="flex:2"><img src="{% static 'images/placeholder.png' %}" alt="" class="row-image"></div>
+                    <div style="flex:2"><p>상품 1</p></div>
+                    <div style="flex:1"><p>20,000원</p></div>
+                    <div style="flex:1"><p>2</p></div>
+                </div>
+                <h5>아이템:   2</h5>
+                <h5>총액:     4,000원</h5>
+            </div>
+        </div>
+    </div>
 {% endblock content %}

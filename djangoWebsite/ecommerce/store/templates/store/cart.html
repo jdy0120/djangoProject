@@ -14,7 +14,7 @@
                         <th><h5>물건: <strong>3</strong></h5></th>
                         <th><h5>총액: <strong>42000원</strong></h5></th>
                         <th>
-                            <a href="(% url 'checkout' %)" class="btn btn-success">결제</a>
+                            <a href="{% url 'checkout' %}" class="btn btn-success">결제</a>
                         </th>
                     </tr>
                 </table>
@@ -22,6 +22,28 @@
 
             <br>
             <div class="box-element">
+                <div class="cart-row">
+                    <div style="flex:2"></div>
+                    <div style="flex:2">Item</div>
+                    <div style="flex:1">Price</div>
+                    <div style="flex:1">Quantity</div>
+                    <div style="flex:1">Total</div>
+                </div>
+
+                <div class="car-row">
+                    <div style="flex:2"><img src="{% static 'images/placeholder.png' %}" alt="" class="rowimage"></div>
+                    <div style="flex:2"><p>물건 1</p></div>
+                    <div style="flex:1"><p>20,000원</p></div>
+                    <div style="flex:1">
+                        <p class="quantity">2</p>
+                        <div class="quantity">
+                            <img src="{% static 'images/arrow-up.png' %}" alt="" class="chg-quantity">
+                            
+                            <img src="{% static 'images/arrow-down.png' %}" alt="" class="chg-quantity">
+                        </div>
+                    </div>
+                    <div style="flex:1"><p>32,000원</p></div>
+                </div>
 
             </div>
         </div>
