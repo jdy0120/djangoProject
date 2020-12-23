@@ -7,6 +7,7 @@ django로 구현한 todo앱
 ## ApiTest
 >testApi
 api를 json으로 출력하는 기본적인 api테스트 파일입니다.
+<img src="djangoApiTest\restFramework\todo_drf\img\api.png">
 
 >restFramework
 api를 crud할 수 있는 api테스트 프로젝트입니다.

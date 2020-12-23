@@ -52,14 +52,16 @@
                 <hr>
                 <h3>주문 목록</h3>
                 <hr>
-                <div class="car-row">
-                    <div style="flex:2"><img src="{% static 'images/placeholder.png' %}" alt="" class="row-image"></div>
-                    <div style="flex:2"><p>상품 1</p></div>
-                    <div style="flex:1"><p>20,000원</p></div>
-                    <div style="flex:1"><p>2</p></div>
+                {% for item in items %}
+                <div class="cart-row">
+                    <div style="flex:2"><img src="{{item.product.imageURL}}" alt="" class="row-image"></div>
+                    <div style="flex:2"><p>{{item.product.name}}</p></div>
+                    <div style="flex:1"><p>{{item.product.price|floatformat:0}}원</p></div>
+                    <div style="flex:1"><p>{{item.quantity}}</p></div>
                 </div>
-                <h5>아이템:   2</h5>
-                <h5>총액:     4,000원</h5>
+                {% endfor %}
+                <h5>개수:   {{order.get_cart_items}}</h5>
+                <h5>총액:   {{order.get_cart_total|floatformat:0}}원</h5>
             </div>
         </div>
     </div>
