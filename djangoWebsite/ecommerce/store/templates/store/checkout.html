@@ -36,7 +36,7 @@
                     </div>
 
                     <hr>
-                    <input type="submit" value="계속" id="formbutton" class="btn btn-success btn-block">
+                    <input type="submit" value="계속" id="form-button" class="btn btn-success btn-block">
                 </form>
             </div>
 
@@ -65,4 +65,20 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var shipping = '{{order.shipping}}'
+
+        if (shipping == 'False') {
+            document.getElementById('shipping-info').innerHTML = ''
+        }
+
+        var form = document.getElementById('form')
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault()
+            console.log('Form submitted...')
+            document.getElementById('form-button').classList.add('hidden') // continue를 누르면 버튼이 바뀜
+            document.getElementById('payment-info').classList.remove('hidden')
+        })
+    </script>
 {% endblock content %}
