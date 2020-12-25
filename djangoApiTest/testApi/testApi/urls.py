@@ -18,6 +18,8 @@ from addresses import views
 from django.urls import path
 
 urlpatterns = [
+    url('^$', views.login_page),
+
     path('addresses/', views.address_list),
     path('addresses/<int:pk>/', views.address),
     path('login/', views.login),

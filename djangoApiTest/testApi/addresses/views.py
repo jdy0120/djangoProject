@@ -43,6 +43,7 @@ def address(request, pk):
         obj.delete()
         return HttpResponse(status=204)
 
+"""
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
@@ -54,3 +55,18 @@ def login(request):
             return HttpResponse(status=200)
         else:
             return HttpResponse(status=400)
+"""
+def login_page(request):
+    return render(request, "addresses/login.html")
+
+
+def login(request): # api값을 request하는 함수
+    if request.method == 'POST':
+        print("request"+str(request))
+        print("body"+str(request.body))
+        userid = request.POST.get("userid","")
+        userpw = request.POST.get("userpw","")
+
+        print("userid = " + userid + " userpw = " + userpw)
+
+        return HttpResponse(status=200)
