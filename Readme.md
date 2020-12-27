@@ -5,7 +5,7 @@
 
 ### django로 구현한 todo앱
 
-<img src="djangoToDoApp\img\index.png">
+<img src="./djangoToDoApp/img/index.png">
 
 ```python
 # list.html에 필요한 자료를 보내주는 함수
