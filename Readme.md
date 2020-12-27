@@ -5,7 +5,7 @@
 
 ### django로 구현한 todo앱
 
-<img src="./djangoToDoApp/img/index.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoToDoApp/img/index.PNG">
 
 ```python
 # list.html에 필요한 자료를 보내주는 함수
@@ -25,7 +25,7 @@ def index(request):
 
 ```
 
-<img src="djangoToDoApp\img\update.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoToDoApp/img/update.PNG">
 
 ```python
 # update_task.html에 필요한 내용을 보내주는 함수
@@ -45,7 +45,7 @@ def updateTask(request, pk):
     return render(request,'tasks/update_task.html', context) 
 ```
 
-<img src="djangoToDoApp\img\delete.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoToDoApp/img/delete.PNG">
 
 ```python
 # delete.html에 필요한 내용을 보내주는 함수
