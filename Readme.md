@@ -65,7 +65,7 @@ def deleteTask(request, pk):
 
 ### api를 json으로 출력하는 기본적인 api테스트 파일입니다.
 
-<img src="djangoApiTest\restFramework\todo_drf\img\api.png" width=300 height=200>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/api.PNG" width=300 height=200>
 
 ```python
 @api_view(['GET'])
@@ -81,7 +81,7 @@ def apiOverview(request):
     return Response(api_urls)
 ```
 
-<img src="djangoApiTest\restFramework\todo_drf\img\task-list.png" width=200 height=500>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/task-list.PNG" width=200 height=500>
 
 ```python
 @api_view(['GET'])
@@ -91,7 +91,7 @@ def taskList(request): # 모든 list데이터 출력
     return Response(serializer.data)
 ```
 
-<img src="djangoApiTest\restFramework\todo_drf\img\task-detail.png" width=300 height=200>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/task-detail.PNG" width=300 height=200>
 
 ```python
 @api_view(['GET'])
@@ -101,7 +101,7 @@ def taskDetail(request,pk): # 특정 pk값을 가지는 데이터 출력
     return Response(serializer.data)
 ```
 
-<img src="djangoApiTest\restFramework\todo_drf\img\task-create.png" width=300 height=200>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/task-create.PNG" width=300 height=200>
 
 ```python
 @api_view(['POST']) # 데이터 삽입
@@ -115,7 +115,7 @@ def taskCreate(request):
 
 ```
 
-<img src="djangoApiTest\restFramework\todo_drf\img\task-update.png" width=300 height=200>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/task-update.PNG" width=300 height=200>
 
 ```python
 @api_view(['POST'])
@@ -129,7 +129,7 @@ def taskUpdate(request,pk): # 데이터 수정
     return Response(serializer.data)
 ```
 
-<img src="djangoApiTest\restFramework\todo_drf\img\task-delete.png" width=300 height=200>
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoApiTest/restFramework/todo_drf/img/task-delete.PNG" width=300 height=200>
 
 ```python
 @api_view(['DELETE'])
@@ -145,7 +145,7 @@ def taskDelete(request,pk): # 데이터 삭제
 >pollster
 투표 프로젝트 입니다.
 
-<img src="djangoPollingApp\pollster\img\index.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/index.PNG">
 
 ```python
 # 질문을 가져와 출력해준다
@@ -155,7 +155,7 @@ def index(request):
     return render(request, 'polls/index.html', context)
 ```
 
-<img src="djangoPollingApp\pollster\img\polls.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/polls.PNG">
 
 ```python
 # 질문 목록을 보여주고 선택할 수 있는 화면
@@ -167,7 +167,7 @@ def detail(request, question_id):
   return render(request, 'polls/detail.html', { 'question': question })
 ```
 
-<img src="djangoPollingApp\pollster\img\result.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/result.PNGs">
 
 ```python
 # 결과를 보여준다
@@ -176,7 +176,7 @@ def results(request, question_id):
   return render(request, 'polls/results.html', { 'question': question })
 ```
 
-<img src="djangoPollingApp\pollster\img\vote.png">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/vote.PNG">
 
 ```python
 # 투표한다.
