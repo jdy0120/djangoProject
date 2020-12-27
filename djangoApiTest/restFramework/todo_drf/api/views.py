@@ -21,21 +21,21 @@ def apiOverview(request):
     return Response(api_urls)
 
 @api_view(['GET'])
-def taskList(request):
-    tasks = Task.objects.all()
+def taskList(request): # 모든 list데이터 출력
+    tasks = Task.objects.all() # 모든 pk값을 가져온다
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
 
 @api_view(['GET'])
-def taskDetail(request,pk):
-    tasks = Task.objects.get(id=pk)
+def taskDetail(request,pk): # 특정 pk값을 가지는 데이터 출력
+    tasks = Task.objects.get(id=pk) # 특정 pk값을 url에서 가져온다
     serializer = TaskSerializer(tasks, many=False)
     return Response(serializer.data)
 
-@api_view(['POST'])
+@api_view(['POST']) # 데이터 삽입
 def taskCreate(request):
-    serializer = TaskSerializer(data=request.data)
+    serializer = TaskSerializer(data=request.data) # data=request 데이터를 적을 칸 생성
 
     if serializer.is_valid():
         serializer.save()
@@ -43,7 +43,7 @@ def taskCreate(request):
     return Response(serializer.data)
 
 @api_view(['POST'])
-def taskUpdate(request,pk):
+def taskUpdate(request,pk): # 데이터 수정
     task = Task.objects.get(id=pk)
     serializer = TaskSerializer(instance=task, data=request.data)
 
@@ -53,7 +53,7 @@ def taskUpdate(request,pk):
     return Response(serializer.data)
 
 @api_view(['DELETE'])
-def taskDelete(request,pk):
+def taskDelete(request,pk): # 데이터 삭제
     task = Task.objects.get(id=pk)
     task.delete()
 

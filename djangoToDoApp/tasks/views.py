@@ -7,18 +7,18 @@ from .forms import *
 # Create your views here.
 
 def index(request):
-    tasks = Task.objects.all()
+    tasks = Task.objects.all() # Task는 title, complete, created가 담겨있는 class
 
-    form = TaskForm()
+    form = TaskForm() # 자주 사용하는 form을 저장했다.
 
     if request.method =='POST':
-        form = TaskForm(request.POST)
+        form = TaskForm(request.POST) # form이 있는지 확인
         if form.is_valid():
-            form.save()
+            form.save() # 저장
         return redirect('/')
 
     context = {'tasks':tasks, 'form':form}
-    return render(request, 'tasks/list.html', context)
+    return render(request, 'tasks/list.html', context) # context object를 해당 html파일에 보낸다
 
 def updateTask(request, pk):
     task = Task.objects.get(id=pk)
@@ -33,7 +33,7 @@ def updateTask(request, pk):
 
     context = {'form':form}
 
-    return render(request,'tasks/update_task.html', context)
+    return render(request,'tasks/update_task.html', context) 
 
 def deleteTask(request, pk):
     item = Task.objects.get(id=pk)
