@@ -167,7 +167,7 @@ def detail(request, question_id):
   return render(request, 'polls/detail.html', { 'question': question })
 ```
 
-<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/result.PNGs">
+<img src="https://github.com/jdy0120/djangoProject/blob/master/djangoPollingApp/pollster/img/result.PNG">
 
 ```python
 # 결과를 보여준다
